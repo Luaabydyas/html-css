@@ -6,6 +6,7 @@
     <title>Tabelas</title>
 
     <style>
+
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -18,16 +19,27 @@
             box-shadow: inset 3px 4px 5px #00000048
 
         }
+
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+        /*
+        THEAD > TR > TH ( rolamento da tabela)
+        */
+
+        thead > tr > th {
+            position: sticky;
+            top: 0;
+            background-color: rgb(95, 93, 93);
+
         }
         td, th {
             border: 1px solid black;
             padding: 10px;
-            
-            
         }
+
         tfoot {
             background-color: black;
         }
@@ -36,13 +48,16 @@
             background-color: rgb(95, 93, 93);
             color: white;
 
-            }
-        
+        }
         
         td.num {
             text-align: right;
         }
-        
+
+       /*
+            odd ( ímpar)
+            even (par)
+        */
         tbody > tr:nth-child(odd) {
             background-color: rgb(241, 238, 238);
         }
@@ -56,10 +71,7 @@
 </head>
 <body>
     <h1>Uso de tabelas grandes</h1>
-    <!--
-            odd ( ímpar)
-            even (par)
-        -->
+    
     <!--
 
         Caption ( titulo da tabela)
@@ -105,7 +117,8 @@
                 <td class="num">11 444 38</td>
             </tr>
             <tr>
-                <td>Rio Grande do Suk</td>
+                <td>Rio Grande do Sul</td>
+                
                 <td class="num">10 882 965</td>
             </tr>
             <tr>
@@ -200,6 +213,7 @@
             </tr>
         </tfoot>
     </table>
+    
     
 </body>
 </html>
